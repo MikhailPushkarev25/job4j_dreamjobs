@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -86,8 +85,7 @@ public class PsqlStore implements Store {
             try (ResultSet it = ps.executeQuery()) {
                 while (it.next()) {
                     candidate.add(new Candidate(it.getInt("id"),
-                            it.getString("name"),
-                            it.getInt("city")
+                            it.getString("name")
                             ));
                 }
             }
@@ -134,11 +132,10 @@ public class PsqlStore implements Store {
 
     private Candidate createCandidate(Candidate candidate) {
         try (Connection cn = pool.getConnection();
-             PreparedStatement ps = cn.prepareStatement("INSERT INTO candidate(name, city) VALUES (?, ?)",
+             PreparedStatement ps = cn.prepareStatement("INSERT INTO candidate(name) VALUES (?)",
                      PreparedStatement.RETURN_GENERATED_KEYS)
         ) {
             ps.setString(1, candidate.getName());
-            candidate.setCity(candidate.getCity());
             ps.execute();
             try (ResultSet id = ps.getGeneratedKeys()) {
                 if (id.next()) {
@@ -166,11 +163,10 @@ public class PsqlStore implements Store {
     private void updateCandidate(Candidate candidate) {
         try (Connection cn = pool.getConnection();
              PreparedStatement ps = cn.prepareStatement(
-                     "UPDATE candidate SET name = (?), city = (?) WHERE id = (?)")
+                     "UPDATE candidate SET name = (?) WHERE id = (?)")
         ) {
             ps.setString(1, candidate.getName());
-            ps.setInt(2, candidate.getCity());
-            ps.setInt(3, candidate.getId());
+            ps.setInt(2, candidate.getId());
             ps.executeUpdate();
         } catch (Exception e) {
             LOG.error("Exception in log example");
@@ -331,8 +327,7 @@ public class PsqlStore implements Store {
             try (ResultSet it = ps.executeQuery()) {
                 if (it.next()) {
                     candidate = new Candidate(it.getInt("id"),
-                            it.getString("name"),
-                            it.getInt("city")
+                            it.getString("name")
                     );
                 }
             }
@@ -351,8 +346,7 @@ public class PsqlStore implements Store {
             try (ResultSet it = ps.executeQuery()) {
                 if (it.next()) {
                      new Candidate(it.getInt("id"),
-                             it.getString("name"),
-                             it.getInt("city")
+                             it.getString("name")
                      );
                 }
             }

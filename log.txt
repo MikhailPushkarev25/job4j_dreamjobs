@@ -1,0 +1,96 @@
+Exception in log example 
+ org.postgresql.util.PSQLException: ОШИБКА: столбец "city_id" в таблице "candidate" не существует
+  Позиция: 29
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at ru.job4j.dream.store.PsqlStore.createCandidate(PsqlStore.java:142)
+	at ru.job4j.dream.store.PsqlStore.saveCan(PsqlStore.java:300)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:16)
+Exception in log example 
+ org.postgresql.util.PSQLException: Колонки city_id не найдено в этом ResultSet’’е.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at ru.job4j.dream.store.PsqlStore.findAllCandidates(PsqlStore.java:90)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:18)
+Exception in log example
+ Exception in log example 
+ org.postgresql.util.PSQLException: Колонки city_id не найдено в этом ResultSet’’е.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at ru.job4j.dream.store.PsqlStore.findAllCandidates(PsqlStore.java:90)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:27)
+Exception in log example 
+ org.postgresql.util.PSQLException: ОШИБКА: столбец "city" в таблице "candidate" не существует
+  Позиция: 29
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at ru.job4j.dream.store.PsqlStore.createCandidate(PsqlStore.java:142)
+	at ru.job4j.dream.store.PsqlStore.saveCan(PsqlStore.java:300)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:16)
+Exception in log example 
+ org.postgresql.util.PSQLException: Колонки city не найдено в этом ResultSet’’е.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at ru.job4j.dream.store.PsqlStore.findAllCandidates(PsqlStore.java:90)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:18)
+Exception in log example
+ Exception in log example 
+ org.postgresql.util.PSQLException: Колонки city не найдено в этом ResultSet’’е.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at ru.job4j.dream.store.PsqlStore.findAllCandidates(PsqlStore.java:90)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:27)
+Exception in log example 
+ org.postgresql.util.PSQLException: ОШИБКА: столбец "city_id" в таблице "candidate" не существует
+  Позиция: 29
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at org.apache.commons.dbcp2.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:94)
+	at ru.job4j.dream.store.PsqlStore.createCandidate(PsqlStore.java:141)
+	at ru.job4j.dream.store.PsqlStore.saveCan(PsqlStore.java:299)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:16)
+Exception in log example 
+ org.postgresql.util.PSQLException: Колонки city_id не найдено в этом ResultSet’’е.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at ru.job4j.dream.store.PsqlStore.findAllCandidates(PsqlStore.java:89)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:18)
+Exception in log example
+ Exception in log example 
+ org.postgresql.util.PSQLException: Колонки city_id не найдено в этом ResultSet’’е.
+	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2607)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2498)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
+	at ru.job4j.dream.store.PsqlStore.findAllCandidates(PsqlStore.java:89)
+	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:27)

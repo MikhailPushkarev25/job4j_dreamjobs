@@ -5,12 +5,12 @@ import java.util.Objects;
 public class Candidate {
     private int id;
     private String name;
-    private int city;
+    private int city_id;
 
-    public Candidate(int id, String name, int city) {
+    public Candidate(int id, String name, int city_id) {
         this.id = id;
         this.name = name;
-        this.city = city;
+        this.city_id = city_id;
     }
 
     public Candidate(int id, String name) {
@@ -18,12 +18,12 @@ public class Candidate {
         this.name = name;
     }
 
-    public int getCity() {
-        return city;
+    public int getCityId() {
+        return city_id;
     }
 
-    public void setCity(int city) {
-        this.city = city;
+    public void setCityId(int city_id) {
+        this.city_id = city_id;
     }
 
     public int getId() {
@@ -48,11 +48,11 @@ public class Candidate {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Candidate candidate = (Candidate) o;
-        return id == candidate.id && city == candidate.city && Objects.equals(name, candidate.name);
+        return id == candidate.id && city_id == candidate.city_id && Objects.equals(name, candidate.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, city);
+        return Objects.hash(id, name, city_id);
     }
 }

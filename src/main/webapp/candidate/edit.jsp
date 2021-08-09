@@ -30,7 +30,7 @@
                 dataType: 'json'
             }).done(function (data) {
                 data.forEach(el => {
-                    document.querySelector('#city').append(new Option(el.name, el.id));
+                    document.querySelector('#city_id').append(new Option(el.name, el.id));
                 })
             }).fail(function (err) {
                 console.log(err);
@@ -65,8 +65,8 @@
                         <input type="text" id="name" class="form-control" name="name" value="<%=candidate.getName()%>" title="Введите имя">
                     </div>
                     <div class="form-group">
-                        <label for="city">Город</label>
-                        <select class="form-control" id="city" name="city"  title="Выберите город">
+                        <label for="city_id">Город</label>
+                        <select class="form-control" id="city_id" name="city_id"  title="Выберите город">
                             <option></option>
                         </select>
                     </div>
