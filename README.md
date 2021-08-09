@@ -4,12 +4,12 @@
 [![codecov](https://codecov.io/gh/MikhailPushkarev25/job4j_dreamjobs/branch/master/graph/badge.svg?token=9UgjaycEw7)](https://codecov.io/gh/MikhailPushkarev25/job4j_dreamjobs)
 
 
-![ScreenShot](./images/(1).png)
+![ScreenShot](images/(1).png)
 
-![ScreenShot](./images/(2).png)
+![ScreenShot](images/(2).png)
 
-![ScreenShot](./images/(3).png)
+![ScreenShot](images/(3).png)
 
-![ScreenShot](./images/(4).png)
+![ScreenShot](images/(4).png)
 
-![ScreenShot](./images/(5).png)
+![ScreenShot](images/(5).png)
