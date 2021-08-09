@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function validate() {
+            if ($('#name').val() === '') {
+                alert($('#name').attr('title'));
+            }
+            if ($('#surname').val() === '') {
+                alert($('#surname').attr('title'));
+            }
+            if ($('#sex').val() === '') {
+                alert($('#sex').attr('title'));
+            }
+            if ($('#sex2').val() === '') {
+                alert($('#sex2').attr('title'));
+            }
+            if ($('#textArea').val() === '') {
+                alert($('#textArea').attr('title'));
+            }
+            return false;
+        }
+        function addRow() {
+            const name = $('#name').val();
+            const surname = $('#surname').val();
+            const sex = $('#sex').val();
+            const sex2 = $('#sex2').val();
+            const textArea = $('#textArea').val();
+
+            $('#table tr:last').after('<tr><td>' + name +'</td><td>' + surname + '</td><td>' + sex +
+                '</td><td>' + sex2 + '</td><td>' + textArea + '</td></tr>');
+        }
+    </script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <h1>My First Bootstrap Page</h1>
+    <p>This is some text.</p>
+</div>
+<form>
+    <div class="form-group">
+        <label for="name">Имя</label>
+        <input type="text" class="form-control" id="name" title="Поле для ввода имени">
+    </div>
+    <div class="form-group">
+        <label for="surname">Фамилия</label>
+        <input type="text" class="form-control" id="surname" title="Поле для ввода фамилии">
+    </div>
+    <fieldset class="form-group row">
+        <legend class="col-form-label col-sm-2 float-sm-left pt-0">Пол</legend>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="sex" title="Укажите пол" value="option1" checked>
+                <label class="form-check-label" for="sex">
+                    Женский
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="sex2" title="Укажите пол" value="option2">
+                <label class="form-check-label" for="sex2">
+                    Мужской
+                </label>
+            </div>
+            <button type="button" class="btn btn-default" onclick="return validate();">Отправить</button>
+        </div>
+    </fieldset>
+    <div class="form-group">
+        <label for="textArea">Описание</label>
+        <textarea class="form-control" id="textArea" title="Укажите описание" rows="3"></textarea>
+    </div>
+</form>
+<table class="table" id="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+    </tr>
+    </tbody>
+    <button type="button" class="btn btn-default" onclick="addRow()">Add row</button>
+</table>
+</body>
+</html>
