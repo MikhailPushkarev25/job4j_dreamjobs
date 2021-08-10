@@ -94,3 +94,5 @@ Exception in log example
 	at org.apache.commons.dbcp2.DelegatingResultSet.getInt(DelegatingResultSet.java:633)
 	at ru.job4j.dream.store.PsqlStore.findAllCandidates(PsqlStore.java:89)
 	at ru.job4j.dream.store.PsqlMain.main(PsqlMain.java:27)
+Exception in log example
+ 

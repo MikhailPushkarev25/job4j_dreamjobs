@@ -23,3 +23,4 @@ CREATE TABLE city (
 
 insert into city(id, name) values (1, 'Moscow');
 insert into city(id, name) values (2, 'Spb');
+insert into city(id, name) values (3, 'Vladimir');
